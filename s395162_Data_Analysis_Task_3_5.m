@@ -26,6 +26,16 @@ xlim([0, 1]);
 legend('$u/u_b$', '$v/u_b$', '$w/u_b$', 'Interpreter', 'latex', 'FontSize', 14, 'Location', 'east');
 set(gca, 'TickLabelInterpreter', 'latex', 'FontSize', 14);
 
+%mean value
+figure(5)
+hold on
+plot(x_smpl, mean_x, ':r', 'LineWidth', 2);
+plot(x_smpl, mean_y, '--b', 'LineWidth', 2);
+plot(x_smpl, mean_z, '-k', 'LineWidth', 2);
+xlabel('$x/\delta$', 'Interpreter', 'latex', 'FontSize', 14);
+legend('$u/u_b$', '$v/u_b$', '$w/u_b$', 'Interpreter', 'latex', 'FontSize', 14, 'Location', 'east');
+set(gca, 'TickLabelInterpreter', 'latex', 'FontSize', 14);
+
 % Compute the mean and standard deviation of each velocity component at every sampling point
 mean_x = mean(u_smpl);
 mean_y = mean(v_smpl);
